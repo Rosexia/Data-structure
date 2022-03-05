@@ -1,0 +1,43 @@
+//合并有序数组
+//https://blog.csdn.net/Lchilde/article/details/90377211
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i=0,j=0,k=i+j;
+    int a[]={3,5,8,11};
+    int b[]={2,6,8,9,11,15,20};
+    int c[11];
+	while((i<4)&&(j<7))
+    {
+    	
+    	if(a[i]<=b[j])
+    	{
+    		c[k]=a[i];
+    		i++;
+    		k++;
+    	}
+    	else
+		{
+			c[k]=b[j];
+			j++;
+			k++;
+	    }
+	}
+	    while(j<7)
+	    {
+	    	c[k]=b[j];
+	    	j++;
+	    	k++;
+		}
+		while(i<4)
+		{
+			c[k]=a[i];
+			i++;
+			k++;
+		}
+    for(k=0;k<11;k++)
+    printf("%d ",c[k]);
+    return 0;
+}
+    
